@@ -42,8 +42,8 @@ public class Main {
         empleadosController.actualizarDatos(actualizarDatosEmpleado);
 
 
-        //vamos a borrar un empleado de la base de datos
-        Integer eliminarEmpleado = 302;
+//        //vamos a borrar un empleado de la base de datos
+        Integer eliminarEmpleado = 655;
         EmpleadosController.eliminar(eliminarEmpleado);
 
 

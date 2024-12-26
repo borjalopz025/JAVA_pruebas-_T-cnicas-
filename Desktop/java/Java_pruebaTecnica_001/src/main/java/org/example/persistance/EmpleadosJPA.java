@@ -93,8 +93,11 @@ public class EmpleadosJPA {
 
             em.getTransaction().begin();
             Empleados empleado = em.find(Empleados.class, eliminarEmpleado);
-            if (empleado != null) {
-                em.remove(empleado); //Elimina al empleado de la base de datos si existe
+            if (empleado == null) {
+                System.out.println( "Empleado con ID " + eliminarEmpleado + " no existe en la base de datos.");
+            } else {
+                //Elimina al empleado de la base de datos si existe
+                em.remove(empleado);
             }
             em.getTransaction().commit();
 
